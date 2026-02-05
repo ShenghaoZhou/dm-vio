@@ -1,0 +1,39 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "config",
+      "type": "shell",
+
+      "command": "pixi run cmake -B ${workspaceFolder}/build -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_COLOR_DIAGNOSTICS=1 -GNinja -DCMAKE_BUILD_TYPE=Release -DPangolin_INCLUDE_DIRS=/home/shzhou/project/vio_bench/dm-vio/.pixi/envs/default/include",
+      "problemMatcher": []
+    },
+    {
+      "label": "config_debug",
+      "type": "shell",
+      "command": "pixi run cmake -B ${workspaceFolder}/build -DGTSAM_DIR=${workspaceFolder}/gtsam/build -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_COLOR_DIAGNOSTICS=1 -GNinja -DCMAKE_BUILD_TYPE=Debug",
+      "problemMatcher": []
+    },
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "pixi run cmake --build ${workspaceFolder}/build -j 20",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": ["config"],
+      "problemMatcher": []
+    },
+    {
+      "label": "build_debug",
+      "type": "shell",
+      "command": "pixi run cmake --build ${workspaceFolder}/build -j 20",
+      "group": {
+        "kind": "build"
+      },
+      "dependsOn": ["config_debug"],
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 SET(PROJECT_NAME DMVIO)
 
 PROJECT(${PROJECT_NAME})
-CMAKE_MINIMUM_REQUIRED(VERSION 3.1)
+CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 
 IF(NOT CMAKE_BUILD_TYPE)
@@ -30,7 +30,7 @@ ENDIF()
 
 # optional libraries
 find_package(LibZip QUIET)
-find_package(Pangolin 0.2 QUIET)
+find_package(Pangolin QUIET)
 find_package(OpenCV QUIET)
 
 
