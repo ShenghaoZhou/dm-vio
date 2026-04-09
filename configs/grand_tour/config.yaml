@@ -1,0 +1,24 @@
+# accelerometer_noise_density:  9e-3
+# gyroscope_noise_density: 5e-3
+# accelerometer_random_walk: 2.8e-3
+# gyroscope_random_walk: 1.3e-3
+# integration_sigma: 31.6227
+
+
+# accelerometer_noise_density:  0.00078448
+# gyroscope_noise_density: 0.00017453
+# accelerometer_random_walk: 0.00644833
+# gyroscope_random_walk: 0.00024437
+# integration_sigma: 3.16227
+
+# accelerometer_noise_density: 0.224
+# gyroscope_noise_density: 0.01280
+# accelerometer_random_walk: 0.0430
+# gyroscope_random_walk: 0.00110
+# integration_sigma: 0.316227
+
+accelerometer_noise_density: 0.2
+gyroscope_noise_density: 0.016968
+accelerometer_random_walk: 0.003
+gyroscope_random_walk: 0.000019393
+integration_sigma: 0.316227
